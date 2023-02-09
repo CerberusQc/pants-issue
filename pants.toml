@@ -1,0 +1,21 @@
+[GLOBAL]
+pants_version = "2.15.0rc4"
+
+backend_packages = [
+    "pants.backend.docker",
+    "pants.backend.python",
+    "pants.backend.python.lint.flake8",
+]
+
+[anonymous-telemetry]
+enabled = false
+
+[python]
+interpreter_constraints = ["CPython==3.10.*"]
+tailor_pex_binary_targets = false
+
+[python-infer]
+string_imports = true
+
+[source]
+marker_filenames = ["pyproject.toml"]
